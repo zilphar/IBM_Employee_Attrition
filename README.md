@@ -11,9 +11,14 @@ SQL is used in managing and querying a database. understanding employee attritio
 The primary goal of the analysis is to gain a deeper understanding of the cators inflencing employee attrition within the IBM organization. This include:
 
 1. What are the primary factors contributing to employee attrition?
-2. Are there specific demographics, job roles, or departments that experinces higher attition 
+2. Are there specific demographics, job roles, or departments that experiences higher attition 
    rates?
-3. 
+3. What actionable insights can be drawn to to enhance employee retention startegies?
+
+****<ins>Data Exploration</ins>****
+
+The data was clean and the needed transformation was changing the Dataset name using excel (I was using this data for learning purposes).
+I uploaded the dataset an an excel file in MYSQl using the data import wizard. 
 
 
 
