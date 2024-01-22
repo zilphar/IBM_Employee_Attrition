@@ -9,7 +9,7 @@ SELECT COUNT(*) no_of_columns
 FROM information_schema.columns
 WHERE Table_name = "ibm_employee_attrition";
 
--- 3. the different types of Business travel and How frequent each is used by customers 
+-- 3. the different types of Business travel and How frequent each is used by employees
 SELECT DISTINCT BusinessTravel, COUNT(EmployeeNumber) AS no_of_travels
 FROM ibm_employee_attrition
 GROUP BY BusinessTravel
@@ -21,11 +21,11 @@ FROM ibm_employee_attrition
 GROUP BY Department
 ORDER BY no_of_employees DESC;
 
--- 5. Education field of the employees
+-- 5. Education field of the employees and number of employees in each
 SELECT DISTINCT EducationField 
 FROM ibm_employee_attrition; 
 
--- employees job roles
+-- employees job roles and the number of employees in each
 SELECT DISTINCT JobRole, COUNT(EmployeeNumber) AS no_of_employees
 FROM ibm_employee_attrition
 GROUP BY JobRole
@@ -58,8 +58,8 @@ SELECT
 	CASE JobSatisfaction
 		 WHEN 1 THEN "low"
 		 WHEN 2 THEN "Medium"
-         WHEN 3 THEN "High"
-         WHEN 4 THEN "Very High"
+         	 WHEN 3 THEN "High"
+       		 WHEN 4 THEN "Very High"
 		 END AS Jobsatisfaction, 
 		 COUNT(EmployeeNumber) AS no_of_employees
 FROM ibm_employee_attrition
@@ -86,9 +86,9 @@ GROUP BY Department;
 -- identifying employees with highest monthly income 
 WITH HighIncomeCTE AS (
 	SELECT EmployeeNumber, Age, Department, JobRole, MonthlyIncome
-    FROM ibm_employee_attrition
-    WHERE MonthlyIncome >= 8000)
-
+   	FROM ibm_employee_attrition
+   	WHERE MonthlyIncome >= 8000
+)
 SELECT *
 FROM HighIncomeCTE;
 
@@ -99,7 +99,7 @@ WHERE MonthlyIncome >= 8000;
 
 -- calculating average age of employees 
 WITH AverageAgeCTE AS ( 
-	SELECT Department, AVG(Age) AS average_age
+    SELECT Department, AVG(Age) AS average_age
     FROM ibm_employee_attrition
     GROUP BY Department
     ORDER BY average_age DESC
@@ -112,7 +112,7 @@ FROM AverageAgeCTE;
 SELECT EmployeeNumber, Age, Department, Gender, JobRole, MonthlyIncome
 FROM ibm_employee_attrition
 WHERE YearsAtCompany >= (SELECT AVG(YearsAtCompany)
-					     FROM  ibm_employee_attrition); 
+			 FROM  ibm_employee_attrition); 
 
 -- changing the data type in JobSatisfaction from number (int) to text (VARCHAR)
 ALTER TABLE ibm_employee_attrition
