@@ -6,23 +6,19 @@ SQL is used in managing and querying a database. understanding employee attritio
 
 ***I used MYSQL in this project to query and extract results from the dataset provided. I Used the ***<ins>train</ins>*** dataset provided of the two given in the Ibm Empployee Attrition.***
 
-****<ins>Problem Statement</ins>****
-
-The primary goal of the analysis is to gain a deeper understanding of the factors influencing employee attrition within the IBM organization. This include:
-
-1. What are the primary factors contributing to employee attrition?
-2. Are there specific demographics, job roles, or departments that experiences higher attition 
-   rates?
-3. What actionable insights can be drawn to to enhance employee retention startegies?
-
 ****<ins>Data Exploration</ins>****
 
 The data was clean and the needed transformation was changing the Dataset name using excel (I was using this data for learning purposes).
-I uploaded the dataset an an excel file in MYSQl using the data import wizard. 
+I uploaded the dataset as a csv file in MYSQl using the data import wizard. 
 
 ****<ins>SQL Queries Used</ins>****
 
 **Defining the structure of the table**
+
+----
+DESCRIBE ibm_employee_attrition;
+
+The code above gives the table schema including the column names, and the datatypes in each column.  ![image](https://github.com/zilphar/IBM_Employee_Attrition/assets/116642579/a3570855-b249-42a7-9055-50bdbdf53203)
 
 ----
 
@@ -44,4 +40,10 @@ The above query returns the number of columns in the table. ![image](https://git
 
 ----
 
+SELECT *
 
+FROM ibm_employee_attrition
+
+LIMIT 5;
+
+The query provides the first five rows of the dataset giving a snippet of the data contained in the table. 
