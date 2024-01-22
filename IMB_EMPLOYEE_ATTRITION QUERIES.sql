@@ -1,4 +1,4 @@
--- working with the imb_employee_attrition dataset 
+-- working with the ibm_employee_attrition dataset 
 
 -- 1. determining the total number of employees(rows) in the table (returns 412)
 SELECT COUNT(EmployeeNumber) AS total_no_of_employees
