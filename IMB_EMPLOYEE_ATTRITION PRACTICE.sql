@@ -1,5 +1,8 @@
 -- working with the ibm_employee_attrition dataset 
 
+-- structure of the table (includes the column names and the datatype comtained in each)
+DESCRIBE ibm_employee_attrition;
+
 -- determining the total number of employees(rows) in the table (returns 412)
 SELECT COUNT(EmployeeNumber) AS total_no_of_employees
 FROM ibm_employee_attrition;
@@ -8,6 +11,11 @@ FROM ibm_employee_attrition;
 SELECT COUNT(*) no_of_columns
 FROM information_schema.columns
 WHERE Table_name = "ibm_employee_attrition";
+
+-- gives a sample of the table data 
+SELECT *
+FROM ibm_employee_attrition
+LIMIT 5;
 
 -- the different types of Business travel and How frequent each is used by employees
 SELECT DISTINCT BusinessTravel, COUNT(EmployeeNumber) AS no_of_travels
