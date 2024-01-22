@@ -24,6 +24,7 @@ I uploaded the dataset an an excel file in MYSQl using the data import wizard.
 
 **Defining the strustcure of the table**
 1. 
+
 SELECT COUNT(EmployeeNumber) AS total_no_of_employees
 
 FROM ibm_employee_attrition; 
