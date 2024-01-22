@@ -1,7 +1,7 @@
 -- working with the ibm_employee_attrition dataset 
 
 -- structure of the table (includes the column names and the datatype comtained in each)
-DESCRIBE ibm_employee_attrition;
+DESCRIBE ibm_employee_attrition; 
 
 -- determining the total number of employees(rows) in the table (returns 412)
 SELECT COUNT(EmployeeNumber) AS total_no_of_employees
