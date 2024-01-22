@@ -31,7 +31,7 @@ FROM ibm_employee_attrition
 GROUP BY JobRole
 ORDER BY no_of_employees DESC;
 
--- Employee gender returns (262 males, and 150 females)
+-- Employee gender (returns 262 males, and 150 females)
 SELECT Gender, COUNT(EmployeeNumber) AS no_of_employees
 FROM ibm_employee_attrition
 GROUP BY Gender
@@ -71,7 +71,7 @@ SELECT OverTime, COUNT(EmployeeNumber) AS no_of_employees
 FROM ibm_employee_attrition
 GROUP BY OverTime;
 
--- a larger number of employees in the research department receive/ do not recieve overtime
+    -- a larger number of employees in the research department receive/ do not recieve overtime
 SELECT DISTINCT Department, COUNT(EmployeeNumber) AS no_of_employees
 FROM ibm_employee_attrition
 WHERE Overtime = "Yes"
