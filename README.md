@@ -22,7 +22,8 @@ I uploaded the dataset an an excel file in MYSQl using the data import wizard.
 
 ****<ins>SQL Queries Used</ins>****
 
-**Defining the strustcure of the table**
+**Defining the structure of the table**
+
 1. 
 
 SELECT COUNT(EmployeeNumber) AS total_no_of_employees
@@ -32,6 +33,7 @@ FROM ibm_employee_attrition;
 The above query returns the number of rows or the number of employees in the dataset. ![image](https://github.com/zilphar/IBM_Employee_Attrition/assets/116642579/ad29e141-30aa-4e42-b616-37aa821e46cc)
 
 2. 
+
 SELECT COUNT(*) no_of_columns
 
 FROM information_schema.columns
