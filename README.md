@@ -2,7 +2,7 @@
 
 ****<ins>Introduction</ins>****
 
-SQL is used in managing and querying a database. understanding employee attrition is a critical aspect in the workforce. I embarked on a comprehensive analysis of employee attrition dataset which contains a variety of factors that may contribute to employee attrition.
+SQL is used in managing and querying a database. understanding employee attrition is a critical aspect in the workforce. I embarked on an analysis of employee attrition dataset which contains a variety of factors that may contribute to employee attrition.
 
 ***I used MYSQL in this project to query and extract results from the dataset provided. I Used the ***<ins>train</ins>*** dataset provided of the two given in the Ibm Empployee Attrition.***
 
