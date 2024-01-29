@@ -33,9 +33,9 @@ WHERE Age >= 18;
 -- calculating average age of employees 
 WITH AverageAgeCTE AS ( 
 	SELECT Department, AVG(Age) AS average_age
-    FROM ibm_employee_attrition
-    GROUP BY Department
-    ORDER BY average_age DESC
+	FROM ibm_employee_attrition
+        GROUP BY Department
+	ORDER BY average_age DESC
 )
 SELECT *
 FROM AverageAgeCTE; 
@@ -83,12 +83,12 @@ ORDER BY no_of_employees DESC;
 -- replacing the values in job satisfaction with the actual description (1 'Low', 2 'Medium', 3 'High', 4 'Very High')
 SELECT 
 	CASE JobSatisfaction
-		 WHEN 1 THEN "low"
-		 WHEN 2 THEN "Medium"
-         WHEN 3 THEN "High"
-         WHEN 4 THEN "Very High"
-		 END AS Jobsatisfaction, 
-		 COUNT(EmployeeNumber) AS no_of_employees
+		WHEN 1 THEN "low"
+		WHEN 2 THEN "Medium"
+         	WHEN 3 THEN "High"
+         	WHEN 4 THEN "Very High"
+	END AS Jobsatisfaction, 
+	COUNT(EmployeeNumber) AS no_of_employees
 FROM ibm_employee_attrition
 GROUP BY JobSatisfaction
 ORDER BY no_of_employees DESC;
@@ -117,8 +117,8 @@ GROUP BY Department;
 -- identifying employees with highest monthly income 
 WITH HighIncomeCTE AS (
 	SELECT EmployeeNumber, Age, Department, JobRole, MonthlyIncome
-    FROM ibm_employee_attrition
-    WHERE MonthlyIncome >= 8000)
+	FROM ibm_employee_attrition
+    	WHERE MonthlyIncome >= 8000)
 
 SELECT *
 FROM HighIncomeCTE;
@@ -133,7 +133,7 @@ WHERE MonthlyIncome >= 8000;
 SELECT EmployeeNumber, Age, Department, Gender, JobRole, MonthlyIncome
 FROM ibm_employee_attrition
 WHERE YearsAtCompany >= (SELECT AVG(YearsAtCompany)
-					     FROM  ibm_employee_attrition); 
+		         FROM  ibm_employee_attrition); 
 
 -- Gender based analysis on Jobsatisfaction (average satisfaction ranges from 2.6 in males and 2.7 in females on a scale of 1 to 4)
 SELECT Gender, Over18, ROUND(AVG(JobSatisfaction), 2) AS average_satisfaction
