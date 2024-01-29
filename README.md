@@ -11,7 +11,7 @@ SQL is used in managing and querying a database. understanding employee attritio
 The data was clean and the needed transformation was changing the Dataset name using excel (I was using this data for learning purposes).
 I uploaded the dataset as a csv file in MYSQl using the data import wizard. 
 
-****<ins>SQL Queries Used</ins>****
+****<ins>An Overview of the data used</ins>****
 
 **Defining the structure of the table**
 
