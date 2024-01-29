@@ -39,11 +39,3 @@ WHERE Table_name = "ibm_employee_attrition";
 The above query returns the number of columns in the table. ![image](https://github.com/zilphar/IBM_Employee_Attrition/assets/116642579/e6df9f27-1637-4a12-8f0b-3f59943354d1)
 
 ----
-
-SELECT *
-
-FROM ibm_employee_attrition
-
-LIMIT 5;
-
-The query provides the first five rows of the dataset giving a snippet of the data contained in the table. 
