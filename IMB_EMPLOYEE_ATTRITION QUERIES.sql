@@ -141,8 +141,23 @@ FROM ibm_employee_attrition
 GROUP BY Gender, Over18
 ORDER BY average_satisfaction;
 
--- performance rating 
+-- performance rating (performance rating is generally a 3 and a 4)
 SELECT DISTINCT PerformanceRating
 FROM ibm_employee_attrition;
 
+SELECT DISTINCT PerformanceRating,
+	CASE PerformanceRating
+		WHEN 1 THEN "Low"
+   		WHEN 2 THEN  "Good"
+    		WHEN 3 THEN "Excellent"
+      		WHEN 4 THEN "Outstanding"
+	END AS Performancerating
+FROM ibm_employee_attrition;
+
+-- employees with excellent performance rating and have a good worklife balance 
+-- (employees who have stayed more than 5 years in teh company and with a good worklife Better(3) or Best(4) balance who have a 3 and 4 performancerating are many)
+SELECT DISTINCT WorkLifeBalance, PerformanceRating, COUNT(EmployeeNumber) AS no_of_employees
+FROM ibm_employee_attrition
+WHERE YearsAtCompany > 5
+GROUP BY PerformanceRating, WorkLifeBalance; 
 
